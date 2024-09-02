@@ -19,7 +19,7 @@ public struct JettonTransferMessage {
                                        stateInit: StateInit? = nil
                                        ) throws -> MessageRelaxed {
         let forwardAmount = BigUInt(stringLiteral: "1")
-        let jettonTransferAmount = BigUInt(stringLiteral: "640000000")
+        let jettonTransferAmount = BigUInt(stringLiteral: "50000000")
         let queryId = UInt64(Date().timeIntervalSince1970)
       
         var commentCell: Cell?
