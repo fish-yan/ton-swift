@@ -11,9 +11,8 @@ let package = Package(
         .library(name: "TonSwift", targets: ["TonSwift"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/attaswift/BigInt", .exact("5.3.0")),
+        .package(url: "https://github.com/attaswift/BigInt", from: "5.3.0"),
         .package(url: "https://github.com/bitmark-inc/tweetnacl-swiftwrap", .upToNextMajor(from: "1.0.0")),
-        .package(url: "https://github.com/jedisct1/swift-sodium", .exact("0.9.1"))
     ],
     targets: [
         .target(
@@ -21,7 +20,6 @@ let package = Package(
             dependencies: [
                 .product(name: "BigInt", package: "BigInt"),
                 .product(name: "TweetNacl", package: "tweetnacl-swiftwrap"),
-                .product(name: "Sodium", package: "swift-sodium"),
             ]),
         .testTarget(
             name: "TonSwiftTests",
